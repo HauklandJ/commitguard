@@ -32,7 +32,7 @@ To install and run CommitGuard, you'll need to have Rust and Cargo installed on 
 
 4. The executable will be in ./target/release/guard. You can move it to a location in your PATH for easier access. <br> Linux:
     ```bash
-    sudo mv ./target/release/guard /usr/local/bin/
+    sudo mv target/release/guard /usr/local/bin/
     ```
 
 ## Usage
