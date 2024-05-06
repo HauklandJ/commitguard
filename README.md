@@ -40,10 +40,10 @@ To install and run CommitGuard, you'll need to have Rust and Cargo installed on 
 After installation, you can run CommitGuard using the following commands:
 | command | long    | short | description                       |
 |---------|---------|-------|-----------------------------------|
-| version |--version|  -v   |Show the installed version of guard|
-| help    |--help   |  -h   |Show this table                    |
-| init    |--init   |  -i   |Adds the commit guard to the repo  |
-| remove  |--remove |  -r   |Remvoes the guard                  |
+| init    |--init   |  -i   |Sets up commit guard for the repo  |
+| remove  |--remove |  -r   |Removes the guard                  |
+| version |--version|  -v   |Prints version number              |
+| help    |--help   |  -h   |Print help information             |
 
 ## Example
 
