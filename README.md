@@ -56,12 +56,20 @@ After installation, you can run CommitGuard using the following commands:
 
 ## Example
 
-To set up a commit message validation hook in your repository, navigate to your repository's root directory and run:
 ```bashrc
+cd myRepo
 guard --init
-touch newfile.txt
-git add newfile.txt
+touch README.md
+git add README.md
 git commit -m "rubbish commit message"
+---
+Error: Invalid commit-message. Please follow the conventional commit format:
+    <type>[optional scope]: <description>
+    [optional body]
+    [optional footer(s)]
+Valid types include: feat, fix, docs, style, refactor, perf, test, chore
+---
+git commit -m "docs: add readme file"
 ```
 
 If you need to remove the hook, simply run:
