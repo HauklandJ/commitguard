@@ -38,21 +38,12 @@ To install and run CommitGuard, you'll need to have Rust and Cargo installed on 
 ## Usage
 
 After installation, you can run CommitGuard using the following commands:
-
-- **Print Version**: Shows the current version of Guard.
-  ```
-  guard --version / -v
-  ```
-
-- **Initialize Git Hook**: Sets up the git hook for validating commit messages according to the conventional commit standard.
-  ```
-  guard --init / -i
-  ```
-
-- **Remove Git Hook**: Removes the previously set git hook for commit message validation.
-  ```
-  guard --remove / -r
-  ```
+| command | long    | short | description                       |
+|---------|---------|-------|-----------------------------------|
+| version |--version|  -v   |Show the installed version of guard|
+| help    |--help   |  -h   |Show this table                    |
+| init    |--init   |  -i   |Adds the commit guard to the repo  |
+| remove  |--remove |  -r   |Remvoes the guard                  |
 
 ## Example
 
