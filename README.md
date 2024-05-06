@@ -1,0 +1,84 @@
+# CommitGuard
+
+CommitGuard is a Rust command-line application designed to manage git hooks for [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). It simplifies adding and removing a custom commit message validator in your git repository.
+
+## Features
+
+- **Initialize Commit Message Hook**: Sets up a commit message hook in your git repository to enforce conventional commit formats.
+- **Remove Commit Message Hook**: Removes the commit message hook from your git repository.
+
+## Installation
+
+To install and run CommitGuard, you'll need to have Rust and Cargo installed on your machine.
+
+1. Install Rust and Cargo using [rustup](https://rustup.rs/):
+   ```bash
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+
+2. Clone this repository:<br>
+    ```bash
+    git clone [TODO: add url]
+    ```
+
+    ```bash
+    cd commitguard
+    ```
+
+3. Build the project:
+    ```bash
+    cargo build --release
+    ```
+
+4. The executable will be in ./target/release/guard. You can move it to a location in your PATH for easier access. <br> Linux:
+    ```bash
+    sudo mv ./target/release/guard /usr/local/bin/
+    ```
+
+## Usage
+
+After installation, you can run CommitGuard using the following commands:
+
+- **Print Version**: Shows the current version of Guard.
+  ```
+  guard --version / -v
+  ```
+
+- **Initialize Git Hook**: Sets up the git hook for validating commit messages according to the conventional commit standard.
+  ```
+  guard --init / -i
+  ```
+
+- **Remove Git Hook**: Removes the previously set git hook for commit message validation.
+  ```
+  guard --remove / -r
+  ```
+
+## Example
+
+To set up a commit message validation hook in your repository, navigate to your repository's root directory and run:
+```bashrc
+guard --init
+touch newfile.txt
+git add newfile.txt
+git commit -m "rubbish commit message"
+```
+
+If you need to remove the hook, simply run:
+```
+guard --remove
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open issues to improve the functionality or documentation of CommitGuard.
+
+## License
+
+Copyright 2024 Johannes Haukland
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
