@@ -1,6 +1,6 @@
 # CommitGuard
 
-CommitGuard is a Rust command-line application designed to manage git hooks for [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). It simplifies adding and removing a custom commit message validator in your git repository.
+CommitGuard is a Rust command-line application designed to manage git hooks for [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). It simplifies adding and removing a custom commit message validator in your git repository by modifying the `commit-msg` hook.
 
 ## Features
 
