@@ -9,41 +9,44 @@ CommitGuard is a Rust command-line application designed to manage git hooks for 
 
 ## Installation
 
-To install and run CommitGuard, you'll need to have Rust and Cargo installed on your machine.
+Prerequisites: Rust and Cargo installed.
 
 1. Install Rust and Cargo using [rustup](https://rustup.rs/):
+
    ```bash
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
 
 2. Clone this repository:<br>
-    ```bash
-    git clone [TODO: add url]
-    ```
 
-    ```bash
-    cd commitguard
-    ```
+   ```bash
+   git clone [TODO: add url]
+   ```
+
+   ```bash
+   cd commitguard
+   ```
 
 3. Build the project:
-    ```bash
-    cargo build --release
-    ```
+
+   ```bash
+   cargo build --release
+   ```
 
 4. The executable will be in ./target/release/guard. You can move it to a location in your PATH for easier access. <br> Linux:
-    ```bash
-    sudo mv target/release/guard /usr/local/bin/
-    ```
+   ```bash
+   sudo mv target/release/guard /usr/local/bin/
+   ```
 
 ## Usage
 
 After installation, you can run CommitGuard using the following commands:
-| command | long    | short | description                       |
+| command | long | short | description |
 |---------|---------|-------|-----------------------------------|
-| init    |--init   |  -i   |Sets up commit guard for the repo  |
-| remove  |--remove |  -r   |Removes the guard                  |
-| version |--version|  -v   |Prints version number              |
-| help    |--help   |  -h   |Print help information             |
+| init |--init | -i |Sets up commit guard for the repo |
+| remove |--remove | -r |Removes the guard |
+| version |--version| -v |Prints version number |
+| help |--help | -h |Print help information |
 
 ## Example
 
@@ -64,6 +67,7 @@ git commit -m "docs: add readme file"
 ```
 
 If you need to remove the hook, simply run:
+
 ```
 guard --remove
 ```
