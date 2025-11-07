@@ -66,6 +66,12 @@ Valid types include: feat, fix, docs, style, refactor, perf, test, chore
 git commit -m "docs: add readme file"
 ```
 
+To bypass the hook, do:
+
+```
+git commit -m "I am doing this for reasons only known to me and god" --no-verify
+```
+
 If you need to remove the hook, simply run:
 
 ```
